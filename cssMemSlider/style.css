@@ -1,3 +1,29 @@
 * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
     margin: 0;
+}
+
+h1 {
+    font-size: 45px;
+}
+.wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slider {
+    display: flex;
+    position: relative;
+    /* //width: 500%; */
+    overflow: hidden;
+}
+.dots label {
+    width: 30px;
+    height: 30px;
+    padding: 5px 13px;
+    border: 2px solid black;
+    border-radius: 100%;
+    margin: 5px;
+    text-align: center;
 }
