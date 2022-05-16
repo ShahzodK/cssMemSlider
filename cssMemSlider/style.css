@@ -3,74 +3,97 @@
     padding: 0;
     margin: 0;
 }
-
+html {
+    font-size: 62.5%;
+    background: #04aa6b;
+}
 h1 {
-    font-size: 45px;
+    text-align: center;
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
 }
 .wrapper {
-    max-width: 600px;
+    max-width: 60rem;
+    height: 50rem;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden;
-
+    overflow: hidden;
 }
 .slider {
     display: flex;
-    position: relative;
-    /* //width: 500%; */
-    height: 440px;
-    width: 600px;
-    animation: slider 10s infinite ease;
+    height: 44rem;
+    width: 60rem;
+    transition: all 800ms ease;
+    border-radius: 1.5rem;
 }
-
 .slider img {
     margin: 0;
     padding: 0;
-    position: relative;
-    height: 400px;
-    width: 600px;   
-    border: 1px solid red;
+    height: 40rem;
+    width: 60rem;   
+    border-radius: 1.5rem;
+
 }
 .slider p {
+    font-size: 2rem;
     text-align: center;
+    width: 60rem; 
+    color: white;
+    padding-top: 1rem;
 }
-.dots label {
-    width: 30px;
-    height: 30px;
-    padding: 5px 13px;
+label {
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+#dots-active {
+    text-align: center;
+    margin-top: 2.5rem;
+    display: block;
+    margin-top: 1.5rem;
+}
+#dots-active label{
+    font-size: initial;
+    width: 3rem;
+    height: 3rem;
+    padding: .5px 9px;
     border: 2px solid black;
     border-radius: 100%;
-    margin: 5px;
+    margin: .5rem;
     text-align: center;
     cursor: pointer;
 }
-.dots {
-    text-align: center;
-    margin-top: 25px;
-    display: block;
-    margin-top: 15px;
+#dots-active label:hover {
+    background: rgba(200, 196, 196, 0.5);
 }
 
-.dots label:hover {
-    background: black;
+#slide-1:checked ~ .slider {
+	margin-left: 0 !important;
 }
 
-@keyframes slider {
-    0% {
-        left: 0;
-    }
-    25% {
-        left: -600px;
-    }
-    50% {
-        left: -1200px;
+#slide-2:checked ~ .slider {
+	margin-left: -100% !important;
+}
 
-    }
-    99.999% {
-        left: -1800px;
+#slide-3:checked ~ .slider {
+	margin-left: -200% !important;
+}
 
-    }
-    100% {
-        left: 0;
-    }
+#slide-4:checked ~ .slider {
+	margin-left: -300% !important;
+}
+
+#slide-1:checked ~ #dots-active label:nth-of-type(1), 
+#slide-2:checked ~ #dots-active label:nth-of-type(2),
+#slide-3:checked ~ #dots-active label:nth-of-type(3), 
+#slide-4:checked ~ #dots-active label:nth-of-type(4) {
+    background: rgba(210, 80, 80, 0.9) !important;
+    transition: all 0.7s ease;
+}  
+
+#slide-1:checked {
+    background: red;
 }
