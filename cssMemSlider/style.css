@@ -12,9 +12,13 @@ h1 {
     font-size: 4.5rem;
     color: white;
     margin-bottom: 1.5rem;
+    margin-right: auto ;
+    margin-left: auto ;
+    display: flex;
+    justify-content: center;
 }
 .wrapper {
-    max-width: 60rem;
+    width: 60rem;
     height: 50rem;
     margin-left: auto;
     margin-right: auto;
@@ -49,6 +53,14 @@ label {
 input {
     display: none;
 }
+span {
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 20px 15px;  
+      /* border: 1px solid red; */
+
+    width: 2rem;
+}
 #dots-active {
     text-align: center;
     margin-top: 2.5rem;
@@ -59,8 +71,8 @@ input {
     font-size: initial;
     width: 3rem;
     height: 3rem;
-    padding: .5px 9px;
-    border: 2px solid black;
+    padding: .6rem .1rem;
+    border: 2px solid white;
     border-radius: 100%;
     margin: .5rem;
     text-align: center;
@@ -68,6 +80,10 @@ input {
 }
 #dots-active label:hover {
     background: rgba(200, 196, 196, 0.5);
+
+}
+#dots-active label:active {
+    background: yellow;
 }
 
 #slide-1:checked ~ .slider {
@@ -96,4 +112,36 @@ input {
 
 #slide-1:checked {
     background: red;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 40rem;
+    }
+    .slider {
+        width:33rem;
+    }
+    .slider img {
+        width: 40rem;
+    }
+    .slider p {
+        width: 40rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width:568px) { 
+    .wrapper {
+        width: 30rem;
+    }
+    .slider {
+        width:26rem;
+        height: 35rem;
+    }
+    .slider img {
+        width: 30rem;
+        height: 30rem;
+    }
+    .slider p {
+        width: 30rem;
+    } 
 }
