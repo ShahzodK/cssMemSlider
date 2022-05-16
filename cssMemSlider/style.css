@@ -1,0 +1,147 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    background: #04aa6b;
+}
+h1 {
+    text-align: center;
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    margin-right: auto ;
+    margin-left: auto ;
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    width: 60rem;
+    height: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    height: 44rem;
+    width: 60rem;
+    transition: all 800ms ease;
+    border-radius: 1.5rem;
+}
+.slider img {
+    margin: 0;
+    padding: 0;
+    height: 40rem;
+    width: 60rem;   
+    border-radius: 1.5rem;
+
+}
+.slider p {
+    font-size: 2rem;
+    text-align: center;
+    width: 60rem; 
+    color: white;
+    padding-top: 1rem;
+}
+label {
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+span {
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 20px 15px;  
+      /* border: 1px solid red; */
+
+    width: 2rem;
+}
+#dots-active {
+    text-align: center;
+    margin-top: 2.5rem;
+    display: block;
+    margin-top: 1.5rem;
+}
+#dots-active label{
+    font-size: initial;
+    width: 3rem;
+    height: 3rem;
+    padding: .6rem .1rem;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin: .5rem;
+    text-align: center;
+    cursor: pointer;
+}
+#dots-active label:hover {
+    background: rgba(200, 196, 196, 0.5);
+
+}
+#dots-active label:active {
+    background: yellow;
+}
+
+#slide-1:checked ~ .slider {
+	margin-left: 0 !important;
+}
+
+#slide-2:checked ~ .slider {
+	margin-left: -100% !important;
+}
+
+#slide-3:checked ~ .slider {
+	margin-left: -200% !important;
+}
+
+#slide-4:checked ~ .slider {
+	margin-left: -300% !important;
+}
+
+#slide-1:checked ~ #dots-active label:nth-of-type(1), 
+#slide-2:checked ~ #dots-active label:nth-of-type(2),
+#slide-3:checked ~ #dots-active label:nth-of-type(3), 
+#slide-4:checked ~ #dots-active label:nth-of-type(4) {
+    background: rgba(210, 80, 80, 0.9) !important;
+    transition: all 0.7s ease;
+}  
+
+#slide-1:checked {
+    background: red;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 40rem;
+    }
+    .slider {
+        width:33rem;
+    }
+    .slider img {
+        width: 40rem;
+    }
+    .slider p {
+        width: 40rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width:568px) { 
+    .wrapper {
+        width: 30rem;
+    }
+    .slider {
+        width:26rem;
+        height: 35rem;
+    }
+    .slider img {
+        width: 30rem;
+        height: 30rem;
+    }
+    .slider p {
+        width: 30rem;
+    } 
+}
